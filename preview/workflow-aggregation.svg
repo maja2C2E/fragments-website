@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Local mechanisms to building assessment</title><desc id="desc">Three schematic local masonry mechanisms, rocking, sliding and separation, contribute to a building-level assessment. No risk categories or performance results are shown.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke="#303832" stroke-width="1.4" stroke-linecap="square">
+<path d="M21 57H65M31 53V20H53V53" stroke="#b8c1b9"/>
+<path d="M33 53L40 21L61 26L54 58Z"/>
+<path d="M103 58H137V43H103ZM110 38H144V22H110Z"/>
+<path d="M178 58V23H195V58ZM204 58V23H221V58Z"/>
+<path d="M93 145V105L120 92L147 105V145ZM93 105H147M100 114H110V124H100ZM130 114H140V124H130ZM100 132H110V145M130 132H140V145"/>
+<path d="M41 66V80H199V66M120 66V88" stroke="#b8c1b9"/>
+</g>
+<g fill="none" stroke="#a65036" stroke-width="1.4"><path d="M61 34C67 38 69 44 68 51M63 47L68 51L72 46M111 15H137M133 11L137 15L133 19M192 39H183M187 35L183 39L187 43M207 39H216M212 35L216 39L212 43M116 84L120 88L124 84"/></g>
+<g fill="#6c766d" font-family="Arial,Helvetica,sans-serif" font-size="10"><text x="9" y="150">Local mechanisms</text><text x="168" y="150">Building level</text></g>
+</svg>

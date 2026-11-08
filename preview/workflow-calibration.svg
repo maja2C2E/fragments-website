@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Calibration of model response</title><desc id="desc">Illustrative measured and model response traces alongside a parameter uncertainty sketch. All traces are schematic and contain no measured values.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#303832"><text x="19" y="22">Response</text><text x="157" y="22">Parameters</text></g>
+<g fill="none" stroke-width="1.5"><path d="M20 39V112H136M159 44V112H225" stroke="#b8c1b9"/>
+<path d="M24 85L30 79L36 88L42 64L48 55L54 67L60 94L66 89L72 62L78 50L84 62L90 85L96 80L102 58L108 64L114 76L120 69L130 73" stroke="#303832"/>
+<path d="M24 84C33 78 36 81 43 64S55 64 60 83S71 78 77 62S87 66 93 77S104 64 110 68S121 76 130 72" stroke="#a65036"/>
+<path d="M163 111C169 110 171 105 176 97S184 65 193 63S206 94 212 103S220 110 225 111" stroke="#303832"/>
+<path d="M178 111V92M207 111V90" stroke="#a65036"/>
+<path d="M178 118H207M178 115V121M207 115V121" stroke="#b8c1b9"/>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#303832"><path d="M20 133H33" stroke="#303832" stroke-width="1.5"/><text x="38" y="136">Measured</text><path d="M103 133H116" stroke="#a65036" stroke-width="1.5"/><text x="121" y="136">Model</text><text x="202" y="152" text-anchor="middle" fill="#6c766d">Schematic</text></g>
+</svg>

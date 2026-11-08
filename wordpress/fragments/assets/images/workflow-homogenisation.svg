@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Masonry homogenisation</title><desc id="desc">A fine staggered masonry grid is represented as a smaller assembly of rigid blocks with contact interfaces.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke="#303832" stroke-width="1.3">
+<path d="M12 39H95V109H12ZM12 49H95M12 59H95M12 69H95M12 79H95M12 89H95M12 99H95"/>
+<path d="M29 39V49M46 39V49M63 39V49M80 39V49M21 49V59M38 49V59M55 49V59M72 49V59M89 49V59M29 59V69M46 59V69M63 59V69M80 59V69M21 69V79M38 69V79M55 69V79M72 69V79M89 69V79M29 79V89M46 79V89M63 79V89M80 79V89M21 89V99M38 89V99M55 89V99M72 89V99M89 89V99M29 99V109M46 99V109M63 99V109M80 99V109" stroke="#b8c1b9"/>
+<path d="M145 39H183V60H145ZM187 39H225V60H187ZM145 64H163V85H145ZM167 64H204V85H167ZM208 64H225V85H208ZM145 89H183V110H145ZM187 89H225V110H187Z"/>
+</g>
+<path d="M107 74H132M126 68L132 74L126 80" fill="none" stroke="#a65036" stroke-width="1.5"/>
+<path d="M143 62H227" stroke="#a65036" stroke-width="1"/>
+<g fill="#303832" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle"><text x="54" y="135">Masonry</text><text x="185" y="135">Rigid blocks</text></g>
+</svg>

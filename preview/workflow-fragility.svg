@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Fragility functions</title><desc id="desc">Two illustrative increasing fragility curves relate seismic intensity to the probability of damage. These curves are schematic, without numerical results or assigned building states.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke-width="1.5"><path d="M39 30V122H224" stroke="#303832"/><path d="M39 34H224M39 78H224" stroke="#b8c1b9" stroke-width=".7" stroke-dasharray="3 4"/>
+<path d="M43 120C71 120 79 117 89 101S104 60 123 45S167 33 220 33" stroke="#a65036" stroke-width="2"/>
+<path d="M43 121C85 121 104 121 119 111S142 81 152 61S176 35 220 34" stroke="#303832" stroke-width="2"/>
+</g>
+<g fill="#303832" font-family="Arial,Helvetica,sans-serif" font-size="12"><text x="132" y="146" text-anchor="middle">Intensity</text><text x="15" y="78" text-anchor="middle" transform="rotate(-90 15 78)">P[damage]</text><text x="222" y="18" text-anchor="end" font-size="10" fill="#6c766d">Schematic</text></g>
+</svg>

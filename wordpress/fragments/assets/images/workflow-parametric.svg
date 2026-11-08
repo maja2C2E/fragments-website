@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Parametric model generation</title><desc id="desc">A parameter document leads to a regular block assembly. The diagram represents model generation and contains no executable code.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke="#303832" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+<path d="M22 28H67L81 42V112H22ZM67 28V42H81"/>
+<path d="M34 53H68M34 66H61M34 79H68M34 92H57" stroke="#b8c1b9"/>
+<path d="M153 61H213V109H153ZM153 61L169 48H229L213 61M213 61L229 48V96L213 109M153 77H213M153 93H213M173 61V77M193 61V77M163 77V93M183 77V93M203 77V93M173 93V109M193 93V109M213 77L229 64M213 93L229 80"/>
+<path d="M173 61L189 48M193 61L209 48" stroke="#b8c1b9"/>
+</g>
+<g fill="none" stroke="#a65036" stroke-width="1.5"><path d="M98 76H132M126 70L132 76L126 82M146 119H220M146 115V123M220 115V123"/><path d="M62 49V57M45 62V70M59 75V83M41 88V96"/></g>
+<g fill="#303832" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle"><text x="52" y="139">Parameters</text><text x="185" y="139">Geometry</text></g>
+</svg>

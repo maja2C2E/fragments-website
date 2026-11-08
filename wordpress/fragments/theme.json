@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Charcoal",
+          "color": "#202522"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "soft",
+          "name": "Soft grey",
+          "color": "#f4f5f3"
+        },
+        {
+          "slug": "green",
+          "name": "Forest accent",
+          "color": "#255748"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Segoe UI / sans-serif",
+          "fontFamily": "\"Segoe UI\", Arial, sans-serif"
+        },
+        {
+          "slug": "serif",
+          "name": "Georgia / serif",
+          "fontFamily": "Georgia, \"Times New Roman\", serif"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw"
+      ],
+      "blockGap": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#202522"
+    },
+    "spacing": {
+      "blockGap": "0"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "16px",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "#202522"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|sans",
+          "fontWeight": "500"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

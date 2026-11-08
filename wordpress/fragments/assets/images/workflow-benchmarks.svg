@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Benchmark specimens</title><desc id="desc">Schematic masonry wall, corner component and building specimens; these outlines do not represent measured results.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke="#303832" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+<path d="M13 102V56H64V102ZM13 68H64M13 79H64M13 91H64M27 56V68M49 56V68M38 68V79M27 79V91M49 79V91M38 91V102"/>
+<path d="M10 106H67M22 52V44H55V52" stroke="#b8c1b9"/>
+<path d="M86 102V50L109 42V94ZM109 42L134 52V104L109 94M86 63L109 55L134 65M86 76L109 68L134 78M86 89L109 81L134 91"/>
+<path d="M97 46V59M97 72V85M121 60V73M121 86V99" stroke="#b8c1b9"/>
+<path d="M154 105V48L185 35L222 48V105ZM154 48H222M185 35V48M153 106H224"/>
+<path d="M163 58H173V70H163ZM183 58H193V70H183ZM203 58H213V70H203ZM163 81H173V93H163ZM183 81H193V105M203 81H213V93H203Z" stroke="#b8c1b9"/>
+</g>
+<path d="M38 37V48M34 44L38 48L42 44" fill="none" stroke="#a65036" stroke-width="1.5"/>
+<g fill="#303832" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle"><text x="38" y="133">Wall</text><text x="110" y="133">Component</text><text x="188" y="133">Building</text></g>
+</svg>

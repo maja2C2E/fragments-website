@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-labelledby="title desc">
+<title id="title">Validation at three scales</title><desc id="desc">A wall component, a complete building and a schematic earthquake record denote component, building and event validation.</desc>
+<rect width="240" height="160" fill="#fff"/>
+<g fill="none" stroke="#303832" stroke-width="1.4" stroke-linejoin="miter">
+<path d="M12 57H58V104H12ZM12 69H58M12 81H58M12 93H58M27 57V69M44 57V69M35 69V81M27 81V93M44 81V93M35 93V104"/>
+<path d="M97 104V51L120 39L143 51V104ZM97 51H143M104 61H113V72H104ZM126 61H135V72H126ZM104 83H113V94H104ZM126 83H135V94H126Z"/>
+<path d="M174 78H231M174 48V107" stroke="#b8c1b9"/>
+<path d="M176 78H181L184 73L187 86L190 61L193 94L196 49L199 102L202 65L205 88L208 70L211 84L214 74L217 81L220 77H230"/>
+</g>
+<g fill="none" stroke="#a65036" stroke-width="1.4"><path d="M67 79H84M79 74L84 79L79 84M151 79H166M161 74L166 79L161 84"/></g>
+<g fill="#303832" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle"><text x="35" y="133">Component</text><text x="120" y="133">Building</text><text x="203" y="133">Event</text></g>
+</svg>

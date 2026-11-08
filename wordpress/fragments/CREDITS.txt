@@ -1,0 +1,49 @@
+Code: GPL-2.0-or-later.
+Research illustrations and project content: supplied by the project owner; rights remain with their respective authors. No separate permission for third-party redistribution of these materials is granted by the code license.
+Assets: model-studija-xi.png and study-collapse.png from Presentation_Zagreb_City_Project_24032026.pptx, slides 26 and 28. istrazivacki-postupak.jpeg from stage2sub_Banicek_FragMENTS_f.pdf, Figure 2.
+
+Replacement study-collapse.png: original embedded media image97.png from the supplied presentation. The unmodified numerical result includes its original displacement scale.
+
+Institution marks identify individual affiliations, not project endorsement. Logos retain their original artwork and remain the property of their institutions.
+﻿Official institution logos downloaded without modification.
+
+zagreb.png
+University of Zagreb, Faculty of Civil Engineering.
+Source page: https://www.grad.unizg.hr/en
+Original logo: https://www.grad.unizg.hr/_pub/themes_static/gf2024/default/img/logo.png
+Original Croatian-language mark, also used on the English faculty site. Transparent PNG. Preserve its original colours and aspect ratio.
+
+rijeka.svg
+University of Rijeka, Faculty of Civil Engineering.
+Source page: https://gradri.uniri.hr/en/
+Original logo: https://gradri.uniri.hr/wp-content/uploads/2023/07/gradjevinski-fakultet-logo-eng-min.svg
+Official English-language faculty logo. ViewBox 0 0 1152 403. Preserve original colours and aspect ratio.
+
+Downloaded 2026-11-03. Logos remain the property of their respective institutions; use as member affiliation identifiers.
+
+ETH Zurich: unmodified inline SVG from https://math.ethz.ch/sam/the-institute/people.html (svg.main-eth-logo).
+lmgc.png: https://lmgc.umontpellier.fr/wp-content/uploads/2025/03/LogoLMGC-RVB-moyen.png
+montpellier.png: https://lmgc.umontpellier.fr/wp-content/uploads/2025/03/logo_um_original_rouge_RVB.png
+cnrs.png: https://lmgc.umontpellier.fr/wp-content/uploads/2025/03/cnrs_2024-1.png
+
+Workflow illustrations: unmodified image54.png (parametric model), image67.png (component response) and image97.png (upper-storey collapse), from Presentation_Zagreb_City_Project_24032026.pptx. These illustrate the research workflow; they are not new FragMENTS results.
+
+HCPI logo: unmodified HCPI_NEW_LOGO.JPG from https://www.grad.unizg.hr/_download/repository/HCPI_NEW_LOGO.JPG, linked as HCPI NEW LOGO in the official faculty repository https://www.grad.unizg.hr/demsic_repo. The general HCPI emblem is displayed alongside the Faculty of Civil Engineering affiliation; it is not the intervention-service logo.
+
+HRZZ English logo: unmodified official 800 x 377 JPG from https://hrzz.hr/wp-content/uploads/2019/11/HRZZ-eng.jpg, linked at https://hrzz.hr/en/the-foundation/logo/. Original colours and aspect ratio retained on white with clear space. Brand guide: https://hrzz.hr/wp-content/uploads/hrzz_knjiga-standarda.pdf. Funding links: https://hrzz.hr/en/.
+
+Workflow illustrations: unmodified image54.png (parametric model), image67.png (component response) and image97.png (upper-storey collapse), from Presentation_Zagreb_City_Project_24032026.pptx. These illustrate the research workflow; they are not new FragMENTS results. Seven original editable SVG line diagrams illustrate benchmarks, homogenisation, parametric models, calibration, validation, fragility and mechanism aggregation. Curves are schematic, not research results.
+
+Current HRZZ English logo: user-supplied transparent hrzz_logo_eng.png, provided in wordpress/pregled on 2026-11-03 and copied without modification as institution-hrzz-en.png. Replaces the previously displayed JPG. Original colours, aspect ratio and transparency preserved. Funding links: https://hrzz.hr/en/.
+
+Current HCPI English logo: user-supplied HCPI logo_eng.png from wordpress/pregled, copied without modification to institution-hcpi-en.png on 2026-11-03. Replaces the previously displayed Croatian HCPI JPG. The centre remains identified as part of the Faculty of Civil Engineering, University of Zagreb.
+
+Current HCPI English logo: user-supplied HCPI logo_eng.png from wordpress/pregled, copied without modification to institution-hcpi-en.png on 2026-11-03. Replaces the previously displayed Croatian HCPI JPG. The centre remains identified as part of the Faculty of Civil Engineering, University of Zagreb. English faculty logo: genuine original vector artwork extracted from Fire Protection of Facades (Faculty of Civil Engineering, 2017), page 1, https://www.grad.unizg.hr/images/50014277/Fire%20Protection%20of%20Facades.pdf. This official stacked variant retains the original seal, GF symbol, English lettering, colours and proportions. It is exported as transparent 1400 x 1056 PNG (institution-zagreb-en.png); source SVG is retained in wordpress-tools/institution-assets/zagreb-en.svg. Only surrounding page content and white backing were removed.
+
+Team portraits: original professional photographs downloaded unchanged from the named institutional or personal academic profiles below. Framing is applied only with CSS; no retouching, face generation or image reconstruction. Source-image URLs, dimensions and hashes are recorded in wordpress-tools/team-portraits/*-sources.json.
+Maja Baniček: https://www.grad.unizg.hr/en/maja.banicek (portrait-maja-banicek.jpg)
+Sara Grbčić Erdelj: https://portal.uniri.hr/Portfolio/2375 (portrait-sara-grbcic-erdelj.jpg)
+Romano Jevtić Rundek: https://www.grad.unizg.hr/romano.jevtic_rundek (portrait-romano-jevtic-rundek.jpg)
+Sara Vaing: https://www.grad.unizg.hr/sara.vaing (portrait-sara-vaing.jpg)
+Mahmoud Shaqfa: https://msshaqfa.github.io/ (portrait-mahmoud-shaqfa.png)
+Frédéric Dubois: https://lmgc.umontpellier.fr/personnels/frederic-dubois/ (portrait-frederic-dubois.jpg)
