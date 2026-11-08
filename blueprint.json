@@ -8,7 +8,7 @@
       "step": "installTheme",
       "themeData": {
         "resource": "url",
-        "url": "https://github.com/maja2C2E/fragments-website/releases/download/v3.0.24/fragments-wordpress.zip"
+        "url": "https://github.com/maja2C2E/fragments-website/releases/download/v3.0.25/fragments-wordpress.zip"
       },
       "options": { "activate": true }
     },
