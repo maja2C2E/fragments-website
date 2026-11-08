@@ -83,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"intro"} -->
-<p class="intro">Historic masonry is a defining part of Zagreb's downtown — and one of the hardest structural types to assess. Damage develops through contact: blocks separating, sliding and rocking against each other, not through smooth, continuous deformation.</p>
+<p class="intro">Historic masonry buildings are an integral part of Zagreb’s city centre. Assessing their seismic response requires understanding how cracks form, how parts of walls move and separate, and how these local mechanisms affect the stability of the building as a whole.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
