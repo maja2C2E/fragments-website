@@ -248,50 +248,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 </section>
 <!-- /wp:group -->
-<!-- wp:group {"className":"wrap open-principles","tagName":"section","layout":{"type":"default"}} -->
-<section class="wp-block-group wrap open-principles">
-<!-- wp:paragraph {"className":"eyebrow"} -->
-<p class="eyebrow">Our approach</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Make the work usable.</h2>
-<!-- /wp:heading -->
-<!-- wp:group {"className":"principles-grid","layout":{"type":"default"}} -->
-<div class="wp-block-group principles-grid">
-<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
-<article class="wp-block-group">
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Document</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Explain installation, inputs, assumptions and examples so others can understand and reproduce the workflow.</p>
-<!-- /wp:paragraph -->
-</article>
-<!-- /wp:group -->
-<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
-<article class="wp-block-group">
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Version & cite</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Identify releases, state reuse terms and provide a clear way to cite the software, data and associated publications.</p>
-<!-- /wp:paragraph -->
-</article>
-<!-- /wp:group -->
-<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
-<article class="wp-block-group">
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">Share responsibly</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Follow FAIR principles for research data: findable, accessible, interoperable and reusable. Explain any access restrictions.</p>
-<!-- /wp:paragraph -->
-</article>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-</section>
-<!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->

@@ -96,3 +96,13 @@ function fragments_redirect_applications() {
     }
 }
 add_action( 'template_redirect', 'fragments_redirect_applications' );
+
+/** Omit the retired section from pages saved before the pattern update. */
+function fragments_remove_retired_principles( $content, $block ) {
+    $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+    if ( is_page( 'open-science' ) && in_array( 'open-principles', $classes, true ) ) {
+        return '';
+    }
+    return $content;
+}
+add_filter( 'render_block_core/group', 'fragments_remove_retired_principles', 10, 2 );
