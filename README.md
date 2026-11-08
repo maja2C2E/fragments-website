@@ -12,6 +12,16 @@ The pages are Home, Project, Research, Team, Open Science and Contact. Applicati
 
 ## Install in WordPress
 
+### Open the complete site in Playground
+
+[Launch FragMENTS in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Fmaja2C2E%2Ffragments-website%2Fmain%2Fblueprint.json)
+
+This Blueprint installs and activates the released theme, creates missing project pages and opens the homepage. A plain Playground session starts with a default WordPress theme; it does not load this repository automatically.
+
+For the VS Code Playground extension, open `FragMENTS.code-workspace` (or this repository folder itself), then start a new WordPress server. The workspace root must contain this theme's `style.css`. Opening the parent research folder instead starts a generic WordPress instance. In an existing instance, install and activate FragMENTS through Appearance > Themes.
+
+### Install the ZIP
+
 1. Download `fragments-wordpress.zip` from the latest GitHub release, or build it with `python tools/package_theme.py`.
 2. In WordPress, open Appearance > Themes > Add New > Upload Theme and upload that ZIP. GitHub theme installers can also use this repository directly because `style.css` is at the repository root.
 3. Activate FragMENTS. The theme creates missing project pages without replacing existing content.
