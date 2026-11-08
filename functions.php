@@ -31,7 +31,7 @@ function fragments_page_url( $slug ) {
 }
 function fragments_project_pages() {
     return array( 'about' => 'Project', 'research' => 'Research', 'team' => 'Team',
-        'open-science' => 'Open Science', 'contact' => 'Contact' );
+        'open-science' => 'Open Science', 'news' => 'News', 'contact' => 'Contact' );
 }
 /** Create missing pages only. A two-pass setup resolves all navigation URLs. */
 function fragments_create_pages() {
@@ -125,3 +125,39 @@ function fragments_remove_collage_download( $content ) {
     return $content;
 }
 add_filter( 'render_block_core/paragraph', 'fragments_remove_collage_download' );
+
+/** Create the dedicated news category without mixing in default blog posts. */
+function fragments_news_category_id() {
+    $term = get_term_by( 'slug', 'fragments-news', 'category' );
+    if ( $term ) { return (int) $term->term_id; }
+    $result = wp_insert_term( 'FragMENTS News', 'category', array( 'slug' => 'fragments-news' ) );
+    return is_wp_error( $result ) ? 0 : (int) $result['term_id'];
+}
+/** Theme updates do not fire after_switch_theme; add only the missing News page. */
+function fragments_install_news_page() {
+    if ( ! current_user_can( 'edit_theme_options' ) || get_option( 'fragments_news_installed' ) ) { return; }
+    if ( ! fragments_news_category_id() ) { return; }
+    if ( ! get_page_by_path( 'news' ) ) {
+        ob_start();
+        include get_theme_file_path( '/patterns/page-news.php' );
+        $content = ob_get_clean();
+        $id = wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_name' => 'news', 'post_title' => 'News', 'post_content' => wp_slash( $content ) ), true );
+        if ( is_wp_error( $id ) || ! $id ) { return; }
+    }
+    update_option( 'fragments_news_installed', 1 );
+}
+add_action( 'admin_init', 'fragments_install_news_page' );
+/** Include News in previously saved theme navigation, without duplicate links. */
+function fragments_news_navigation( $block ) {
+    if ( 'core/navigation' !== $block['blockName'] || strpos( $block['attrs']['className'] ?? '', 'site-nav' ) === false ) { return $block; }
+    // Referenced custom menus remain under the editor's control.
+    if ( ! empty( $block['attrs']['ref'] ) ) { return $block; }
+    foreach ( $block['innerBlocks'] as $child ) {
+        if ( strtolower( $child['attrs']['label'] ?? '' ) === 'news' ) { return $block; }
+    }
+    $item = array( 'blockName' => 'core/navigation-link', 'attrs' => array( 'label' => 'News', 'url' => fragments_page_url( 'news' ), 'kind' => 'custom' ), 'innerBlocks' => array(), 'innerHTML' => '', 'innerContent' => array() );
+    $block['innerBlocks'][] = $item;
+    $block['innerContent'][] = null;
+    return $block;
+}
+add_filter( 'render_block_data', 'fragments_news_navigation' );

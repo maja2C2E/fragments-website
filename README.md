@@ -5,10 +5,10 @@ English-language research project website and native WordPress block theme.
 ## Files
 
 - `preview/`: complete static preview. Open `preview/index.html` in a browser.
-- Repository root: installable theme source, version 3.0.27 (`style.css`, `theme.json`, `functions.php`, `templates/`, `parts/`, `patterns/`, `assets/`).
+- Repository root: installable theme source, version 3.0.28 (`style.css`, `theme.json`, `functions.php`, `templates/`, `parts/`, `patterns/`, `assets/`).
 - `tools/package_theme.py`: creates `dist/fragments-wordpress.zip` using Python 3 (standard library only).
 
-The pages are Home, Project, Research, Team, Open Science and Contact. Applications are included in Open Science; the previous Applications URL redirects there. The homepage uses a static 3D image focused on Lower Town. Research connects observed damage, modelling questions, work packages and validation. Photograph attribution: damage assessment database, CCEE.
+The pages are Home, Project, Research, Team, Open Science, News and Contact. Applications are included in Open Science; the previous Applications URL redirects there. The homepage uses a static 3D image focused on Lower Town. Research connects observed damage, modelling questions, work packages and validation. Photograph attribution: damage assessment database, CCEE.
 
 ## Install in WordPress
 
@@ -34,3 +34,7 @@ Requires WordPress 6.6 or later and PHP 7.4 or later. Preview HTML and native Wo
 Institution logos, portraits and scientific illustrations retain their source attribution in the theme's credits. Their inclusion does not grant a separate licence to reuse third-party artwork or photographs.
 
 Uploading this folder to GitHub stores the website source; it does not deploy a live WordPress website or enable GitHub Pages. No project application documents, local credentials or earlier design archives are included in this folder. Deployment secrets must remain outside version control.
+
+## Publishing news
+
+After deploying version 3.0.28, open the WordPress Dashboard once to create the missing News page and the FragMENTS News category. Existing pages are preserved. Add a post through Posts > Add New, select **FragMENTS News**, optionally set a featured image and excerpt, then publish. News lists six posts per page, newest first, with pagination. The static preview shows the empty state; actual posts appear in WordPress.

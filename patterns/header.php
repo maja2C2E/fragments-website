@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:navigation-link {"label":"Research","url":"<?php echo esc_url( fragments_page_url( 'research' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Team","url":"<?php echo esc_url( fragments_page_url( 'team' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Open Science","url":"<?php echo esc_url( fragments_page_url( 'open-science' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"News","url":"<?php echo esc_url( fragments_page_url( 'news' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Contact","url":"<?php echo esc_url( fragments_page_url( 'contact' ) ); ?>","kind":"custom"} /-->
 <!-- /wp:navigation --></div>
 <!-- /wp:group --></header>
