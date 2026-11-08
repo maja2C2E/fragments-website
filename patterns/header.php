@@ -20,28 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:navigation-link {"label":"Open Science","url":"<?php echo esc_url( fragments_page_url( 'open-science' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Contact","url":"<?php echo esc_url( fragments_page_url( 'contact' ) ); ?>","kind":"custom"} /-->
 <!-- /wp:navigation --></div>
-<!-- /wp:group --><!-- wp:group {"className":"funding-strip","layout":{"type":"default"}} -->
-<div class="wp-block-group funding-strip">
-<!-- wp:group {"className":"wrap funding-inner","layout":{"type":"default"}} -->
-<div class="wp-block-group wrap funding-inner">
-<!-- wp:group {"className":"funding-copy","layout":{"type":"default"}} -->
-<div class="wp-block-group funding-copy">
-<!-- wp:paragraph {"className":"funding-label"} -->
-<p class="funding-label">Funded by</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"funding-name"} -->
-<p class="funding-name">Croatian Science Foundation</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"funding-link"} -->
-<p class="funding-link"><a href="https://hrzz.hr/en/">Visit HRZZ <span aria-hidden="true">↗</span></a></p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-<!-- wp:paragraph {"className":"link-row"} -->
-<p class="link-row"><a aria-label="Croatian Science Foundation (HRZZ) website" class="hrzz-logo" href="https://hrzz.hr/en/"><img alt="Croatian Science Foundation (HRZZ)" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/institution-hrzz-en.png' ) ); ?>"/></a></p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
 <!-- /wp:group --></header>
 <!-- /wp:group -->

@@ -1,6 +1,6 @@
 /*
 Theme Name: FragMENTS
-Version: 3.0.21
+Version: 3.0.22
 Requires at least: 6.6
 Requires PHP: 7.4
 Description: A multipage research website with native WordPress blocks.
@@ -198,3 +198,6 @@ License: GPL-2.0-or-later
   .flow-tasks-list>.flow-task{grid-template-columns:80px minmax(0,1fr)}
   .flow-visual img,.flow-tasks-list .flow-visual img{height:84px}
 }
+
+/* Funding acknowledgement is shown in the footer only, including saved header overrides. */
+.site-header .funding-strip{display:none}

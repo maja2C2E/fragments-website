@@ -188,3 +188,6 @@
   .flow-tasks-list>.flow-task{grid-template-columns:80px minmax(0,1fr)}
   .flow-visual img,.flow-tasks-list .flow-visual img{height:84px}
 }
+
+/* Funding acknowledgement is shown in the footer only, including saved header overrides. */
+.site-header .funding-strip{display:none}
