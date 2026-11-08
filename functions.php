@@ -116,3 +116,12 @@ function fragments_seismic_intro( $content ) {
     return $content;
 }
 add_filter( 'render_block_core/paragraph', 'fragments_seismic_intro' );
+
+/** Remove the retired full-size collage link from previously saved Research pages. */
+function fragments_remove_collage_download( $content ) {
+    if ( is_page( 'research' ) && strpos( $content, 'Explore the photographs at full size' ) !== false ) {
+        return '';
+    }
+    return $content;
+}
+add_filter( 'render_block_core/paragraph', 'fragments_remove_collage_download' );

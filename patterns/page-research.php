@@ -57,9 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/damages_zg_downtown_1_300DPI.png' ) ); ?>" alt="CCEE photographs showing cracking, wall separation and local masonry damage in downtown Zagreb."/><figcaption class="wp-element-caption">Source: damage assessment database, CCEE</figcaption></figure>
 <!-- /wp:image -->
-<!-- wp:paragraph -->
-<p><a href="<?php echo esc_url( get_theme_file_uri( '/assets/images/damages_zg_downtown_1_300DPI.png' ) ); ?>" rel="noopener" target="_blank">Explore the photographs at full size ↗</a></p>
-<!-- /wp:paragraph -->
+
 </div>
 <!-- /wp:group -->
 
