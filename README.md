@@ -5,15 +5,15 @@ English-language research project website and native WordPress block theme.
 ## Files
 
 - `preview/`: complete static preview. Open `preview/index.html` in a browser.
-- `wordpress/fragments/`: installable theme source, version 3.0.19.
+- Repository root: installable theme source, version 3.0.19 (`style.css`, `theme.json`, `functions.php`, `templates/`, `parts/`, `patterns/`, `assets/`).
 - `tools/package_theme.py`: creates `dist/fragments-wordpress.zip` using Python 3 (standard library only).
 
 The pages are Home, Project, Research, Team, Open Science and Contact. Applications are included in Open Science; the previous Applications URL redirects there. The homepage uses a static 3D image focused on Lower Town. Research connects observed damage, modelling questions, work packages and validation. Photograph attribution: damage assessment database, CCEE.
 
 ## Install in WordPress
 
-1. Run `python tools/package_theme.py` from the repository root.
-2. In WordPress, open Appearance > Themes > Add New > Upload Theme and upload the generated ZIP.
+1. Download `fragments-wordpress.zip` from the latest GitHub release, or build it with `python tools/package_theme.py`.
+2. In WordPress, open Appearance > Themes > Add New > Upload Theme and upload that ZIP. GitHub theme installers can also use this repository directly because `style.css` is at the repository root.
 3. Activate FragMENTS. The theme creates missing project pages without replacing existing content.
 4. For an existing installation, use Appearance > FragMENTS setup to create missing pages. Update existing page content manually using the corresponding FragMENTS block patterns.
 
