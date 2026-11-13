@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Principal Investigator, FragMENTS<br/><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>Faculty of Civil Engineering, University of Zagreb</p>
+<p>Principal Investigator, FragMENTS<br/><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>University of Zagreb | Faculty of Civil Engineering</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"pi-email"} -->
 <p class="pi-email"><a href="mailto:maja.banicek@grad.unizg.hr">maja.banicek@grad.unizg.hr</a></p>

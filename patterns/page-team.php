@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h3 class="wp-block-heading">Maja Baniček</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"className":"person-institution"} -->
-<p class="person-institution"><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>Faculty of Civil Engineering, University of Zagreb</p>
+<p class="person-institution"><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>University of Zagreb | Faculty of Civil Engineering</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -210,7 +210,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h3 class="wp-block-heading">Sara Vaing</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"className":"person-institution"} -->
-<p class="person-institution"><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>Faculty of Civil Engineering, University of Zagreb</p>
+<p class="person-institution"><strong>Croatian Centre for Earthquake Engineering (CCEE / HCPI)</strong><br/>University of Zagreb | Faculty of Civil Engineering</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

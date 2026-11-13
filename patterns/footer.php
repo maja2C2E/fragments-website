@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph -->
-<p><strong>Croatian Centre for Earthquake Engineering</strong><br/>CCEE / HCPI<br/>Faculty of Civil Engineering, University of Zagreb</p>
+<p><strong>Croatian Centre for Earthquake Engineering</strong><br/>CCEE / HCPI<br/>University of Zagreb | Faculty of Civil Engineering</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

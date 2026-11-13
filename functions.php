@@ -309,3 +309,9 @@ function fragments_home_project_title( $content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/group', 'fragments_home_project_title', 11, 2 );
+
+/** Keep institutional wording consistent in previously saved page and footer blocks. */
+function fragments_faculty_name( $content ) {
+    return str_replace( 'Faculty of Civil Engineering, University of Zagreb', 'University of Zagreb | Faculty of Civil Engineering', $content );
+}
+add_filter( 'render_block', 'fragments_faculty_name', 20 );
