@@ -171,3 +171,29 @@ function fragments_project_dates( $content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/paragraph', 'fragments_project_dates', 10, 2 );
+
+/** Publish the supplied workshop announcement once; preserve subsequent editorial changes. */
+function fragments_install_lmgc90_workshop() {
+    if ( ! current_user_can( 'publish_posts' ) || get_option( 'fragments_lmgc90_workshop_installed' ) ) { return; }
+    $existing = get_page_by_path( 'lmgc90-workshop-zagreb-2026', OBJECT, 'post' );
+    if ( $existing ) {
+        update_option( 'fragments_lmgc90_workshop_installed', (int) $existing->ID );
+        return;
+    }
+    $category = fragments_news_category_id();
+    if ( ! $category ) { return; }
+    ob_start();
+    include get_theme_file_path( '/patterns/workshop-lmgc90.php' );
+    $content = ob_get_clean();
+    $id = wp_insert_post( array(
+        'post_type' => 'post', 'post_status' => 'publish',
+        'post_name' => 'lmgc90-workshop-zagreb-2026',
+        'post_title' => 'LMGC90 Workshop: Modelling masonry structures',
+        'post_excerpt' => 'Join Frédéric Dubois in Zagreb on 2–4 December 2026 for three days of theory and guided practice in LMGC90, with a focus on contact mechanics and masonry modelling.',
+        'post_content' => wp_slash( $content ),
+        'post_category' => array( $category ),
+        'comment_status' => 'closed', 'ping_status' => 'closed'
+    ), true );
+    if ( ! is_wp_error( $id ) && $id ) { update_option( 'fragments_lmgc90_workshop_installed', (int) $id ); }
+}
+add_action( 'admin_init', 'fragments_install_lmgc90_workshop', 20 );
