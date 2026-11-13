@@ -24,12 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph {"className":"eyebrow"} -->
 <p class="eyebrow">FragMENTS · Earthquake engineering</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Understanding<br/>historic masonry.</h1>
+<!-- wp:heading {"level":1,"className":"hero-project-title"} -->
+<h1 class="wp-block-heading hero-project-title"><span>A Non-Smooth Discrete Element Framework</span> <span>for Seismic Fragility Assessment</span> <span>of Historic Masonry Buildings</span></h1>
 <!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Research into how masonry buildings respond to earthquakes, from the contact between blocks to the behaviour of an entire structure.</p>
-<!-- /wp:paragraph -->
 <!-- wp:group {"className":"hero-actions","layout":{"type":"default"}} -->
 <div class="wp-block-group hero-actions">
 <!-- wp:paragraph {"className":"link-row"} -->
@@ -47,12 +44,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:paragraph -->
 </section>
 <!-- /wp:group -->
-
-<!-- wp:group {"className":"home-project-title wrap","tagName":"section","layout":{"type":"default"}} -->
-<section class="wp-block-group home-project-title wrap">
-<!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">FragMENTS · Full project title</p><!-- /wp:paragraph -->
-<!-- wp:heading {"level":2,"anchor":"full-project-title"} --><h2 class="wp-block-heading" id="full-project-title">A Non-Smooth Discrete Element Framework for Seismic Fragility Assessment of Historic Masonry Buildings</h2><!-- /wp:heading -->
-</section><!-- /wp:group -->
 
 <!-- wp:shortcode -->
 [fragments_latest_news]

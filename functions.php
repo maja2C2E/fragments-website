@@ -291,11 +291,17 @@ function fragments_contact_emails( $content, $block ) {
 }
 add_filter( 'render_block_core/group', 'fragments_contact_emails', 10, 2 );
 
-/** Display the full project title prominently on previously saved homepages. */
+/** Keep the full project title within the image hero on saved homepages. */
 function fragments_home_project_title( $content, $block ) {
-    if ( ! is_front_page() || ! in_array( 'home-page', preg_split( '/\s+/', $block['attrs']['className'] ?? '' ), true ) || strpos( $content, 'home-project-title' ) !== false ) { return $content; }
-    $position = strpos( $content, '</section>' );
-    if ( false === $position ) { return $content; }
-    return substr_replace( $content, '<section class="home-project-title wrap" aria-labelledby="full-project-title"><p class="eyebrow">FragMENTS · Full project title</p><h2 id="full-project-title">A Non-Smooth Discrete Element Framework for Seismic Fragility Assessment of Historic Masonry Buildings</h2></section>', $position + strlen( '</section>' ), 0 );
+    if ( ! is_front_page() ) { return $content; }
+    $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+    if ( in_array( 'home-project-title', $classes, true ) ) { return ''; }
+    if ( in_array( 'hero-content', $classes, true ) ) {
+        if ( strpos( $content, 'hero-project-title' ) === false ) {
+            $content = preg_replace( '/<h1\b[^>]*>.*?<\/h1>/s', '<h1 class="wp-block-heading hero-project-title"><span>A Non-Smooth Discrete Element Framework</span> <span>for Seismic Fragility Assessment</span> <span>of Historic Masonry Buildings</span></h1>', $content, 1 );
+        }
+        $content = str_replace( '<p>Research into how masonry buildings respond to earthquakes, from the contact between blocks to the behaviour of an entire structure.</p>', '', $content );
+    }
+    return $content;
 }
 add_filter( 'render_block_core/group', 'fragments_home_project_title', 11, 2 );
