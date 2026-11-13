@@ -161,3 +161,13 @@ function fragments_news_navigation( $block ) {
     return $block;
 }
 add_filter( 'render_block_data', 'fragments_news_navigation' );
+
+/** Display the confirmed project dates on existing saved Project pages. */
+function fragments_project_dates( $content, $block ) {
+    $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+    if ( is_page( 'about' ) && in_array( 'duration', $classes, true ) ) {
+        return str_replace( 'planned project duration', '1 October 2026 –<br/>30 September 2029', $content );
+    }
+    return $content;
+}
+add_filter( 'render_block_core/paragraph', 'fragments_project_dates', 10, 2 );

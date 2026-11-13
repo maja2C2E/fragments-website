@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"duration"} -->
-<p class="duration"><strong>36</strong><span>months of research<br/>planned project duration</span></p>
+<p class="duration"><strong>36</strong><span>months of research<br/>1 October 2026 –<br/>30 September 2029</span></p>
 <!-- /wp:paragraph -->
 
 </div>

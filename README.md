@@ -5,7 +5,7 @@ English-language research project website and native WordPress block theme.
 ## Files
 
 - `preview/`: complete static preview. Open `preview/index.html` in a browser.
-- Repository root: installable theme source, version 3.0.28 (`style.css`, `theme.json`, `functions.php`, `templates/`, `parts/`, `patterns/`, `assets/`).
+- Repository root: installable theme source, version 3.0.29 (`style.css`, `theme.json`, `functions.php`, `templates/`, `parts/`, `patterns/`, `assets/`).
 - `tools/package_theme.py`: creates `dist/fragments-wordpress.zip` using Python 3 (standard library only).
 
 The pages are Home, Project, Research, Team, Open Science, News and Contact. Applications are included in Open Science; the previous Applications URL redirects there. The homepage uses a static 3D image focused on Lower Town. Research connects observed damage, modelling questions, work packages and validation. Photograph attribution: damage assessment database, CCEE.
@@ -37,4 +37,6 @@ Uploading this folder to GitHub stores the website source; it does not deploy a 
 
 ## Publishing news
 
-After deploying version 3.0.28, open the WordPress Dashboard once to create the missing News page and the FragMENTS News category. Existing pages are preserved. Add a post through Posts > Add New, select **FragMENTS News**, optionally set a featured image and excerpt, then publish. News lists six posts per page, newest first, with pagination. The static preview shows the empty state; actual posts appear in WordPress.
+After deploying version 3.0.29, open the WordPress Dashboard once to create the missing News page and the FragMENTS News category. Existing pages are preserved. Add a post through Posts > Add New, select **FragMENTS News**, optionally set a featured image and excerpt, then publish. News lists six posts per page, newest first, with pagination. The static preview shows the empty state; actual posts appear in WordPress.
+
+Project period: **1 October 2026 – 30 September 2029** (36 months).
