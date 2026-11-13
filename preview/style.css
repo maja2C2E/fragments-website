@@ -295,3 +295,13 @@
 .news-workshop-card .button-link{margin-top:24px}
 @media(max-width:900px){.workshop-intro{gap:30px;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.workshop-preparation,.workshop-organisers{gap:32px}.workshop-facts{grid-template-columns:1fr}}
 @media(max-width:650px){.workshop-intro,.workshop-preparation,.workshop-organisers{grid-template-columns:minmax(0,1fr);gap:28px}.workshop-facts{grid-template-columns:1fr 1fr;gap:18px;padding-block:18px}.workshop-summary .workshop-lead{font-size:20px}.workshop-poster{max-width:420px;width:100%;margin-inline:auto}.workshop-preparation h2,.workshop-organisers h2{font-size:28px}.workshop-session{grid-template-columns:minmax(0,1fr);gap:6px;padding-block:16px}.workshop-day-heading{grid-template-columns:42px minmax(0,1fr);gap:16px}.workshop-day-number{font-size:34px}.workshop-day h3{font-size:24px}.workshop-breaks{padding:16px}.workshop-actions{align-items:flex-start;gap:18px}.workshop-actions .button-link{font-size:12px;padding:12px}.workshop-organisers a{overflow-wrap:anywhere}.news-workshop-card{grid-template-columns:minmax(0,1fr);gap:24px}.news-workshop-card img{width:150px}.news-workshop-card h2{font-size:27px}}
+
+/* Open Science: distinct research visuals for each sharing activity. */
+.open-section .open-visual{margin:28px 0 0;max-width:100%;border-top:1px solid var(--line);padding-top:18px}
+.open-section .open-visual img{display:block;width:100%;height:230px;object-fit:contain;background:#fff}
+.open-section .open-visual figcaption{font-size:11px;line-height:1.5;color:var(--muted);margin-top:12px;padding-bottom:12px;border-bottom:2px solid #a65036}
+.open-section .open-visual-applications figcaption{border-color:#667b65}
+.open-section .open-visual-resources figcaption{border-color:#a58b58}
+.open-section .open-visual-training img{height:330px;object-position:left center}
+.open-section .open-visual-training figcaption{border-color:#536ca0}
+@media(max-width:650px){.open-section .open-visual img{height:190px}.open-section .open-visual-training img{height:290px}}

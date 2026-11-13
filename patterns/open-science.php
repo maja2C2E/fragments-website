@@ -37,6 +37,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>GitHub will host project code and development documentation. This directory will link each released repository to its purpose, instructions and associated research output.</p>
 <!-- /wp:paragraph -->
+<!-- wp:image {"className":"open-visual open-visual-repositories","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full open-visual open-visual-repositories"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/workflow-parametric.svg' ) ); ?>" alt="Parameters leading to a masonry block model"/><figcaption class="wp-element-caption">Scripts & workflows · From parameters to models</figcaption></figure>
+<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"open-directory","layout":{"type":"default"}} -->
@@ -88,6 +91,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>Applications developed through FragMENTS will be available here, alongside their source code and research documentation.</p>
 <!-- /wp:paragraph -->
+<!-- wp:image {"className":"open-visual open-visual-applications","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full open-visual open-visual-applications"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/workflow-model.png' ) ); ?>" alt="Three-dimensional masonry building model"/><figcaption class="wp-element-caption">Research tools · Models and engineering applications</figcaption></figure>
+<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"open-directory","layout":{"type":"default"}} -->
@@ -139,6 +145,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>Research outputs will be linked here as they become available, with persistent identifiers and citation details wherever possible.</p>
 <!-- /wp:paragraph -->
+<!-- wp:image {"className":"open-visual open-visual-resources","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full open-visual open-visual-resources"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/workflow-fragility.svg' ) ); ?>" alt="Schematic fragility curves, not project results"/><figcaption class="wp-element-caption">Sharing results · Data, publications and reproducible analysis</figcaption></figure>
+<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"open-directory","layout":{"type":"default"}} -->
@@ -187,6 +196,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>Workshops connect researchers and engineers through practical examples, discussion and exchange of modelling experience.</p>
 <!-- /wp:paragraph -->
+<!-- wp:image {"className":"open-visual open-visual-training","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full open-visual open-visual-training"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/lmgc90-workshop-flyer.png' ) ); ?>" alt="LMGC90 workshop flyer, Zagreb, 2–4 December 2026"/><figcaption class="wp-element-caption">Training & dissemination · LMGC90 workshop</figcaption></figure>
+<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"open-directory","layout":{"type":"default"}} -->

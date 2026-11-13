@@ -46,3 +46,5 @@ Project period: **1 October 2026 – 30 September 2029** (36 months).
 Version 3.0.30 adds the 2–4 December 2026 workshop in Zagreb. After deployment, open the WordPress Dashboard once as a user who can publish posts. A single announcement is created in FragMENTS News; repeated visits do not duplicate it or overwrite editorial changes. Edit the post via Posts when programme details change. The programme is explicitly preliminary. The original public flyer is included; internal planning notes and the source Word document are not published.
 
 Open Science includes Training & knowledge sharing, linking to the workshop announcement without duplicating its programme. Open the WordPress Dashboard once after deploying 3.0.31 to add the section to an existing Open Science page. No workshop materials are advertised as available.
+
+Version 3.0.32 adds section illustrations to Open Science. Existing saved pages receive the same visuals on rendering without replacing their content. Fragility curves are schematic; releases remain labelled as forthcoming.

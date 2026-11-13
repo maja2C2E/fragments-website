@@ -20,6 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>Workshops connect researchers and engineers through practical examples, discussion and exchange of modelling experience.</p>
 <!-- /wp:paragraph -->
+<!-- wp:image {"className":"open-visual open-visual-training","sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full open-visual open-visual-training"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/lmgc90-workshop-flyer.png' ) ); ?>" alt="LMGC90 workshop flyer, Zagreb, 2–4 December 2026"/><figcaption class="wp-element-caption">Training & dissemination · LMGC90 workshop</figcaption></figure>
+<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"open-directory","layout":{"type":"default"}} -->

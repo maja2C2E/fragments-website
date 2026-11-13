@@ -222,3 +222,21 @@ function fragments_install_training_section() {
     if ( ! is_wp_error( $result ) && $result ) { update_option( 'fragments_training_added', 1 ); }
 }
 add_action( 'admin_init', 'fragments_install_training_section', 30 );
+
+/** Add section illustrations to previously saved Open Science pages. */
+function fragments_open_science_visuals( $content, $block ) {
+    if ( ! is_page( 'open-science' ) || strpos( $content, 'open-visual' ) !== false ) { return $content; }
+    $anchor = $block['attrs']['anchor'] ?? '';
+    $visuals = array(
+        'repositories' => array( 'workflow-parametric.svg', 'Parameters leading to a masonry block model', 'Scripts & workflows · From parameters to models' ),
+        'applications' => array( 'workflow-model.png', 'Three-dimensional masonry building model', 'Research tools · Models and engineering applications' ),
+        'resources' => array( 'workflow-fragility.svg', 'Schematic fragility curves, not project results', 'Sharing results · Data, publications and reproducible analysis' ),
+        'training' => array( 'lmgc90-workshop-flyer.png', 'LMGC90 workshop flyer, Zagreb, 2–4 December 2026', 'Training & dissemination · LMGC90 workshop' ),
+    );
+    if ( ! isset( $visuals[$anchor] ) ) { return $content; }
+    list( $file, $alt, $caption ) = $visuals[$anchor];
+    $figure = '<figure class="wp-block-image open-visual open-visual-' . esc_attr( $anchor ) . '"><img src="' . esc_url( get_theme_file_uri( '/assets/images/' . $file ) ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy" decoding="async"/><figcaption>' . esc_html( $caption ) . '</figcaption></figure>';
+    $position = strpos( $content, '</div>' );
+    return false === $position ? $content : substr_replace( $content, $figure, $position, 0 );
+}
+add_filter( 'render_block_core/group', 'fragments_open_science_visuals', 10, 2 );
