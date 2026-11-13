@@ -3,6 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 function fragments_setup() {
     add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'post-thumbnails' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'editor-styles' );
     add_editor_style( 'style.css' );
@@ -240,3 +241,31 @@ function fragments_open_science_visuals( $content, $block ) {
     return false === $position ? $content : substr_replace( $content, $figure, $position, 0 );
 }
 add_filter( 'render_block_core/group', 'fragments_open_science_visuals', 10, 2 );
+
+/** A compact latest-news feature for the project homepage. */
+function fragments_latest_news() {
+    $category = get_category_by_slug( 'fragments-news' );
+    if ( ! $category ) { return ''; }
+    $posts = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 1,
+        'category' => $category->term_id, 'orderby' => 'date', 'order' => 'DESC', 'ignore_sticky_posts' => true ) );
+    if ( ! $posts ) { return ''; }
+    $news = $posts[0];
+    $url = get_permalink( $news );
+    $title = get_the_title( $news );
+    $image = get_the_post_thumbnail( $news->ID, 'medium', array( 'loading' => 'lazy' ) );
+    if ( ! $image ) {
+        $file = 'lmgc90-workshop-zagreb-2026' === $news->post_name ? 'lmgc90-workshop-flyer.png' : 'workflow-model.png';
+        $image = '<img src="' . esc_url( get_theme_file_uri( '/assets/images/' . $file ) ) . '" alt="' . esc_attr( $title ) . '" loading="lazy" decoding="async">';
+    }
+    $excerpt = $news->post_excerpt ? $news->post_excerpt : wp_strip_all_tags( strip_shortcodes( $news->post_content ) );
+    return '<section class="home-news wrap" aria-labelledby="home-news-title"><div class="home-news-heading"><h2 id="home-news-title">Latest news</h2><a href="' . esc_url( fragments_page_url( 'news' ) ) . '">All news <span aria-hidden="true">↗</span></a></div><article class="home-news-card"><a class="home-news-image" href="' . esc_url( $url ) . '" aria-label="' . esc_attr( $title ) . '">' . $image . '</a><div><p class="eyebrow"><time datetime="' . esc_attr( get_the_date( 'c', $news ) ) . '">' . esc_html( get_the_date( 'j F Y', $news ) ) . '</time></p><h3><a href="' . esc_url( $url ) . '">' . esc_html( $title ) . '</a></h3><p>' . esc_html( wp_trim_words( $excerpt, 36 ) ) . '</p><a class="home-news-read" href="' . esc_url( $url ) . '">Read more <span aria-hidden="true">↗</span></a></div></article></section>';
+}
+add_shortcode( 'fragments_latest_news', 'fragments_latest_news' );
+/** Also support homepage blocks saved before this feature was introduced. */
+function fragments_home_news_compat( $content, $block ) {
+    if ( ! is_front_page() || strpos( $block['attrs']['className'] ?? '', 'home-page' ) === false || strpos( $content, 'home-news' ) !== false ) { return $content; }
+    $position = strpos( $content, '</section>' );
+    if ( false === $position ) { return $content; }
+    return substr_replace( $content, fragments_latest_news(), $position + strlen( '</section>' ), 0 );
+}
+add_filter( 'render_block_core/group', 'fragments_home_news_compat', 10, 2 );

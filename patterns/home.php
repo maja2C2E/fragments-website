@@ -48,6 +48,10 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </section>
 <!-- /wp:group -->
 
+<!-- wp:shortcode -->
+[fragments_latest_news]
+<!-- /wp:shortcode -->
+
 <!-- wp:group {"className":"home-intro wrap","tagName":"section","layout":{"type":"default"}} -->
 <section class="wp-block-group home-intro wrap">
 <!-- wp:group {"layout":{"type":"default"}} -->
