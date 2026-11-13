@@ -315,3 +315,16 @@ function fragments_faculty_name( $content ) {
     return str_replace( 'Faculty of Civil Engineering, University of Zagreb', 'University of Zagreb | Faculty of Civil Engineering', $content );
 }
 add_filter( 'render_block', 'fragments_faculty_name', 20 );
+
+/** Use the supplied flyer in the workshop's News listing when no featured image is set. */
+function fragments_news_workshop_flyer( $content, $block, $instance ) {
+    if ( ! is_page( 'news' ) || trim( $content ) !== '' ) { return $content; }
+    $post = get_post( $instance->context['postId'] ?? 0 );
+    if ( ! $post || 'post' !== $post->post_type || 'lmgc90-workshop-zagreb-2026' !== $post->post_name ) { return $content; }
+    $image = '<img src="' . esc_url( get_theme_file_uri( '/assets/images/lmgc90-workshop-flyer.png' ) ) . '" alt="LMGC90 workshop flyer — Zagreb, 2–4 December 2026" width="1489" height="2105" loading="lazy" decoding="async">';
+    if ( ! empty( $block['attrs']['isLink'] ) ) {
+        $image = '<a href="' . esc_url( get_permalink( $post ) ) . '" aria-label="' . esc_attr( get_the_title( $post ) ) . '">' . $image . '</a>';
+    }
+    return '<figure class="wp-block-post-featured-image news-workshop-flyer">' . $image . '</figure>';
+}
+add_filter( 'render_block_core/post-featured-image', 'fragments_news_workshop_flyer', 10, 3 );

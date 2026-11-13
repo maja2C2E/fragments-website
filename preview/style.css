@@ -341,3 +341,8 @@
 .photo-hero .hero-actions{margin-top:32px}
 @media(max-width:900px){.hero-project-title span{display:inline}.photo-hero .hero-content h1.hero-project-title{max-width:760px;text-wrap:balance;font-size:clamp(32px,4.8vw,44px)}}
 @media(max-width:650px){.photo-hero .hero-content{padding-block:48px 100px}.photo-hero .hero-content h1.hero-project-title{font-size:clamp(29px,7.2vw,40px);line-height:1.18}.photo-hero .hero-content .eyebrow{font-size:10px;margin-bottom:22px}.photo-hero .hero-shade{background:linear-gradient(90deg,#18201be6,#18201b99)}.photo-hero .hero-actions{margin-top:26px}}
+
+/* Show the complete portrait flyer in the News listing. */
+.news-list .news-workshop-flyer{max-width:310px}
+.news-list .news-workshop-flyer img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+@media(max-width:650px){.news-list .news-workshop-flyer{max-width:240px}}
