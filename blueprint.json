@@ -11,7 +11,7 @@
       "step": "installTheme",
       "themeData": {
         "resource": "url",
-        "url": "https://github.com/maja2C2E/fragments-website/releases/download/v3.0.30/fragments-wordpress.zip"
+        "url": "https://github.com/maja2C2E/fragments-website/releases/download/v3.0.31/fragments-wordpress.zip"
       },
       "options": {
         "activate": true
@@ -19,7 +19,7 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php require '/wordpress/wp-load.php'; if (!function_exists('fragments_create_pages')) { throw new Exception('FragMENTS theme is not active.'); } fragments_create_pages(); update_option('blogname', 'FragMENTS'); update_option('blogdescription', 'Seismic fragility of historic masonry buildings'); update_option('show_on_front', 'posts'); wp_set_current_user(1); fragments_install_lmgc90_workshop();"
+      "code": "<?php require '/wordpress/wp-load.php'; if (!function_exists('fragments_create_pages')) { throw new Exception('FragMENTS theme is not active.'); } fragments_create_pages(); update_option('blogname', 'FragMENTS'); update_option('blogdescription', 'Seismic fragility of historic masonry buildings'); update_option('show_on_front', 'posts'); wp_set_current_user(1); fragments_install_lmgc90_workshop(); fragments_install_training_section();"
     }
   ]
 }

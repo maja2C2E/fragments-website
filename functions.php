@@ -197,3 +197,28 @@ function fragments_install_lmgc90_workshop() {
     if ( ! is_wp_error( $id ) && $id ) { update_option( 'fragments_lmgc90_workshop_installed', (int) $id ); }
 }
 add_action( 'admin_init', 'fragments_install_lmgc90_workshop', 20 );
+
+/** Resolve the workshop post using this installation's permalink structure. */
+function fragments_workshop_url() {
+    $post = get_page_by_path( 'lmgc90-workshop-zagreb-2026', OBJECT, 'post' );
+    return $post ? get_permalink( $post->ID ) : add_query_arg( 'name', 'lmgc90-workshop-zagreb-2026', home_url( '/' ) );
+}
+/** Add the training directory once, preserving existing Open Science content. */
+function fragments_install_training_section() {
+    if ( ! current_user_can( 'edit_pages' ) || get_option( 'fragments_training_added' ) ) { return; }
+    $page = get_page_by_path( 'open-science' );
+    if ( ! $page || ! current_user_can( 'edit_post', $page->ID ) ) { return; }
+    if ( strpos( $page->post_content, 'id="training"' ) !== false ) {
+        update_option( 'fragments_training_added', 1 );
+        return;
+    }
+    ob_start();
+    include get_theme_file_path( '/patterns/training.php' );
+    $addition = ob_get_clean();
+    $content = $page->post_content;
+    $position = strrpos( $content, '</main>' );
+    $content = false === $position ? $content . $addition : substr_replace( $content, $addition, $position, 0 );
+    $result = wp_update_post( array( 'ID' => $page->ID, 'post_content' => wp_slash( $content ) ), true );
+    if ( ! is_wp_error( $result ) && $result ) { update_option( 'fragments_training_added', 1 ); }
+}
+add_action( 'admin_init', 'fragments_install_training_section', 30 );
