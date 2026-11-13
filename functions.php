@@ -263,7 +263,11 @@ function fragments_latest_news() {
 add_shortcode( 'fragments_latest_news', 'fragments_latest_news' );
 /** Also support homepage blocks saved before this feature was introduced. */
 function fragments_home_news_compat( $content, $block ) {
-    if ( ! is_front_page() || strpos( $block['attrs']['className'] ?? '', 'home-page' ) === false || strpos( $content, 'home-news' ) !== false ) { return $content; }
+    if ( ! is_front_page() || ! in_array( 'home-page', preg_split( '/\s+/', $block['attrs']['className'] ?? '' ), true ) ) { return $content; }
+    // Older patterns can leave this shortcode as raw text in block templates.
+    $content = preg_replace( '/<p\b[^>]*>\s*\[fragments_latest_news\]\s*<\/p>/', '', $content );
+    $content = str_replace( '[fragments_latest_news]', '', $content );
+    if ( strpos( $content, 'home-news' ) !== false ) { return $content; }
     $position = strpos( $content, '</section>' );
     if ( false === $position ) { return $content; }
     return substr_replace( $content, fragments_latest_news(), $position + strlen( '</section>' ), 0 );
