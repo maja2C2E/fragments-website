@@ -1,6 +1,6 @@
 /*
 Theme Name: FragMENTS
-Version: 3.0.35
+Version: 3.0.36
 Requires at least: 6.6
 Requires PHP: 7.4
 Description: A multipage research website with native WordPress blocks.
@@ -340,3 +340,9 @@ License: GPL-2.0-or-later
 .contact-details .pi-email a{margin-top:0;overflow-wrap:anywhere;font-size:16px}
 .footer-bottom{flex-wrap:wrap;align-items:center;gap:12px 24px}
 .footer-bottom .footer-email{max-width:100%;overflow-wrap:anywhere}
+
+/* Full project name, before the latest-news feature. */
+.home-project-title{padding-block:38px 40px;border-bottom:1px solid var(--line)}
+.home-project-title .eyebrow{color:var(--accent);margin-bottom:16px}
+.home-project-title h2{font-size:clamp(25px,3.2vw,42px);line-height:1.25;letter-spacing:-.025em;max-width:1200px;text-wrap:pretty}
+@media(max-width:650px){.home-project-title{padding-block:28px 30px}.home-project-title h2{font-size:26px;line-height:1.3}}

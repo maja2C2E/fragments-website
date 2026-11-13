@@ -48,6 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </section>
 <!-- /wp:group -->
 
+<!-- wp:group {"className":"home-project-title wrap","tagName":"section","layout":{"type":"default"}} -->
+<section class="wp-block-group home-project-title wrap">
+<!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">FragMENTS · Full project title</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":2,"anchor":"full-project-title"} --><h2 class="wp-block-heading" id="full-project-title">A Non-Smooth Discrete Element Framework for Seismic Fragility Assessment of Historic Masonry Buildings</h2><!-- /wp:heading -->
+</section><!-- /wp:group -->
+
 <!-- wp:shortcode -->
 [fragments_latest_news]
 <!-- /wp:shortcode -->

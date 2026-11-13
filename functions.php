@@ -290,3 +290,12 @@ function fragments_contact_emails( $content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/group', 'fragments_contact_emails', 10, 2 );
+
+/** Display the full project title prominently on previously saved homepages. */
+function fragments_home_project_title( $content, $block ) {
+    if ( ! is_front_page() || ! in_array( 'home-page', preg_split( '/\s+/', $block['attrs']['className'] ?? '' ), true ) || strpos( $content, 'home-project-title' ) !== false ) { return $content; }
+    $position = strpos( $content, '</section>' );
+    if ( false === $position ) { return $content; }
+    return substr_replace( $content, '<section class="home-project-title wrap" aria-labelledby="full-project-title"><p class="eyebrow">FragMENTS · Full project title</p><h2 id="full-project-title">A Non-Smooth Discrete Element Framework for Seismic Fragility Assessment of Historic Masonry Buildings</h2></section>', $position + strlen( '</section>' ), 0 );
+}
+add_filter( 'render_block_core/group', 'fragments_home_project_title', 11, 2 );
