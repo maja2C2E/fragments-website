@@ -269,3 +269,24 @@ function fragments_home_news_compat( $content, $block ) {
     return substr_replace( $content, fragments_latest_news(), $position + strlen( '</section>' ), 0 );
 }
 add_filter( 'render_block_core/group', 'fragments_home_news_compat', 10, 2 );
+
+/** Show project and PI emails on saved contact pages and footer blocks. */
+function fragments_contact_emails( $content, $block ) {
+    $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+    if ( is_page( 'contact' ) && in_array( 'contact-details', $classes, true ) ) {
+        if ( strpos( $content, 'mailto:fragments@grad.unizg.hr' ) === false ) {
+            $position = strpos( $content, '<h3' );
+            if ( false !== $position ) { $content = substr_replace( $content, '<div class="project-email-contact"><p class="eyebrow">Project enquiries</p><h2><a href="mailto:fragments@grad.unizg.hr">fragments@grad.unizg.hr</a></h2><p>For research enquiries, collaborations and information about FragMENTS.</p></div>', $position, 0 ); }
+        }
+        if ( strpos( $content, 'mailto:maja.banicek@grad.unizg.hr' ) === false ) {
+            $position = strrpos( $content, '</div>' );
+            if ( false !== $position ) { $content = substr_replace( $content, '<p class="pi-email"><a href="mailto:maja.banicek@grad.unizg.hr">maja.banicek@grad.unizg.hr</a></p>', $position, 0 ); }
+        }
+    }
+    if ( in_array( 'footer-bottom', $classes, true ) && strpos( $content, 'mailto:fragments@grad.unizg.hr' ) === false ) {
+        $position = strpos( $content, '</p>' );
+        if ( false !== $position ) { $content = substr_replace( $content, '<p class="footer-email"><a href="mailto:fragments@grad.unizg.hr">fragments@grad.unizg.hr</a></p>', $position + 4, 0 ); }
+    }
+    return $content;
+}
+add_filter( 'render_block_core/group', 'fragments_contact_emails', 10, 2 );

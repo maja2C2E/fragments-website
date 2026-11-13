@@ -51,6 +51,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:paragraph -->
 <p>FragMENTS · Seismic fragility of historic masonry</p>
 <!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"footer-email"} -->
+<p class="footer-email"><a href="mailto:fragments@grad.unizg.hr">fragments@grad.unizg.hr</a></p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"link-row"} -->
 <p class="link-row"><a href="<?php echo esc_url( fragments_page_url( 'contact' ) ); ?>">Contact ↗</a></p>
 <!-- /wp:paragraph -->
