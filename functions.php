@@ -436,3 +436,10 @@ function fragments_lecture_event_hours( $content ) {
     return $content;
 }
 add_filter( 'render_block', 'fragments_lecture_event_hours', 21 );
+
+/** Omit the introductory action links from previously saved lecture posts. */
+function fragments_lecture_remove_intro_links( $content, $block ) {
+    if ( is_singular( 'post' ) && get_queried_object()->post_name === 'frederic-dubois-notre-dame-lecture-2026' && in_array( 'workshop-actions', preg_split( '/\s+/', $block['attrs']['className'] ?? '' ), true ) ) { return ''; }
+    return $content;
+}
+add_filter( 'render_block_core/group', 'fragments_lecture_remove_intro_links', 12, 2 );

@@ -66,17 +66,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p>The lecture will be followed by a discussion and an informal gathering with refreshments.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"workshop-actions","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-actions">
-<!-- wp:paragraph {"className":"link-row"} -->
-<p class="link-row"><a class="button-link" href="mailto:fragments@grad.unizg.hr?subject=Notre-Dame%20guest%20lecture">Enquiries ↗</a></p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"link-row"} -->
-<p class="link-row"><a href="<?php echo esc_url( fragments_workshop_url() ); ?>">LMGC90 workshop &amp; programme ↗</a></p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-
 </div>
 <!-- /wp:group -->
 <!-- wp:image {"className":"lecture-portrait","sizeSlug":"full","linkDestination":"none"} -->
