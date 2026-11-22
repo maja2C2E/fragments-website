@@ -246,10 +246,11 @@ add_filter( 'render_block_core/group', 'fragments_open_science_visuals', 10, 2 )
 function fragments_latest_news() {
     $category = get_category_by_slug( 'fragments-news' );
     if ( ! $category ) { return ''; }
-    $posts = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 1,
+    $posts = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 2,
         'category' => $category->term_id, 'orderby' => 'date', 'order' => 'DESC', 'ignore_sticky_posts' => true ) );
     if ( ! $posts ) { return ''; }
-    $news = $posts[0];
+    $cards = '';
+    foreach ( $posts as $news ) {
     $url = get_permalink( $news );
     $title = get_the_title( $news );
     $image = get_the_post_thumbnail( $news->ID, 'medium', array( 'loading' => 'lazy' ) );
@@ -258,7 +259,9 @@ function fragments_latest_news() {
         $image = '<img src="' . esc_url( get_theme_file_uri( '/assets/images/' . $file ) ) . '" alt="' . esc_attr( $title ) . '" loading="lazy" decoding="async">';
     }
     $excerpt = $news->post_excerpt ? $news->post_excerpt : wp_strip_all_tags( strip_shortcodes( $news->post_content ) );
-    return '<section class="home-news wrap" aria-labelledby="home-news-title"><div class="home-news-heading"><h2 id="home-news-title">Latest news</h2><a href="' . esc_url( fragments_page_url( 'news' ) ) . '">All news <span aria-hidden="true">↗</span></a></div><article class="home-news-card"><a class="home-news-image" href="' . esc_url( $url ) . '" aria-label="' . esc_attr( $title ) . '">' . $image . '</a><div><p class="eyebrow"><time datetime="' . esc_attr( get_the_date( 'c', $news ) ) . '">' . esc_html( get_the_date( 'j F Y', $news ) ) . '</time></p><h3><a href="' . esc_url( $url ) . '">' . esc_html( $title ) . '</a></h3><p>' . esc_html( wp_trim_words( $excerpt, 36 ) ) . '</p><a class="home-news-read" href="' . esc_url( $url ) . '">Read more <span aria-hidden="true">↗</span></a></div></article></section>';
+    $cards .= '<article class="home-news-card"><a class="home-news-image" href="' . esc_url( $url ) . '" aria-label="' . esc_attr( $title ) . '">' . $image . '</a><div><p class="eyebrow"><time datetime="' . esc_attr( get_the_date( 'c', $news ) ) . '">' . esc_html( get_the_date( 'j F Y', $news ) ) . '</time></p><h3><a href="' . esc_url( $url ) . '">' . esc_html( $title ) . '</a></h3><p>' . esc_html( wp_trim_words( $excerpt, 36 ) ) . '</p><a class="home-news-read" href="' . esc_url( $url ) . '">Read more <span aria-hidden="true">↗</span></a></div></article>';
+    }
+    return '<section class="home-news wrap" aria-labelledby="home-news-title"><div class="home-news-heading"><h2 id="home-news-title">Latest news</h2><a href="' . esc_url( fragments_page_url( 'news' ) ) . '">All news <span aria-hidden="true">↗</span></a></div><div class="home-news-grid">' . $cards . '</div></section>';
 }
 add_shortcode( 'fragments_latest_news', 'fragments_latest_news' );
 /** Also support homepage blocks saved before this feature was introduced. */
