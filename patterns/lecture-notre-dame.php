@@ -131,7 +131,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p>The lecture is organised within the projects of the <strong>Croatian Centre for Earthquake Engineering</strong> and the <strong>FragMENTS project</strong>, as part of Frédéric Dubois’s visit and the LMGC90 workshop at the Faculty from <strong>2 to 4 December 2026</strong>.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>For further information, contact <a href="mailto:fragments@grad.unizg.hr">fragments@grad.unizg.hr</a>.</p>
+<p>Explore the <a href="<?php echo esc_url( fragments_workshop_url() ); ?>">LMGC90 workshop and programme ↗</a>.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

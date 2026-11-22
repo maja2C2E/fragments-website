@@ -412,3 +412,12 @@ function fragments_workshop_no_welcome( $content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/group', 'fragments_workshop_no_welcome', 12, 2 );
+
+/** Link the lecture's closing information paragraph to the related workshop. */
+function fragments_lecture_workshop_link( $content ) {
+    if ( is_singular( 'post' ) && get_queried_object()->post_name === 'frederic-dubois-notre-dame-lecture-2026' && strpos( $content, 'For further information, contact' ) !== false && strpos( $content, 'mailto:fragments@grad.unizg.hr' ) !== false ) {
+        return '<p>Explore the <a href="' . esc_url( fragments_workshop_url() ) . '">LMGC90 workshop and programme ↗</a>.</p>';
+    }
+    return $content;
+}
+add_filter( 'render_block_core/paragraph', 'fragments_lecture_workshop_link' );
