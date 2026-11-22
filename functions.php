@@ -254,7 +254,7 @@ function fragments_latest_news() {
     $title = get_the_title( $news );
     $image = get_the_post_thumbnail( $news->ID, 'medium', array( 'loading' => 'lazy' ) );
     if ( ! $image ) {
-        $file = 'lmgc90-workshop-zagreb-2026' === $news->post_name ? 'lmgc90-workshop-flyer.png' : 'workflow-model.png';
+        $file = 'lmgc90-workshop-zagreb-2026' === $news->post_name ? 'lmgc90-workshop-flyer.png' : ( 'frederic-dubois-notre-dame-lecture-2026' === $news->post_name ? 'portrait-frederic-dubois.jpg' : 'workflow-model.png' );
         $image = '<img src="' . esc_url( get_theme_file_uri( '/assets/images/' . $file ) ) . '" alt="' . esc_attr( $title ) . '" loading="lazy" decoding="async">';
     }
     $excerpt = $news->post_excerpt ? $news->post_excerpt : wp_strip_all_tags( strip_shortcodes( $news->post_content ) );
@@ -328,3 +328,72 @@ function fragments_news_workshop_flyer( $content, $block, $instance ) {
     return '<figure class="wp-block-post-featured-image news-workshop-flyer">' . $image . '</figure>';
 }
 add_filter( 'render_block_core/post-featured-image', 'fragments_news_workshop_flyer', 10, 3 );
+
+
+
+
+/** Publish the guest lecture once, preserving later editorial changes. */
+function fragments_notre_dame_lecture_url() {
+    $post = get_page_by_path( 'frederic-dubois-notre-dame-lecture-2026', OBJECT, 'post' );
+    return $post ? get_permalink( $post ) : add_query_arg( 'name', 'frederic-dubois-notre-dame-lecture-2026', home_url( '/' ) );
+}
+function fragments_install_notre_dame_lecture() {
+    if ( ! current_user_can( 'publish_posts' ) || get_option( 'fragments_notre_dame_lecture_installed' ) ) { return; }
+    $existing = get_page_by_path( 'frederic-dubois-notre-dame-lecture-2026', OBJECT, 'post' );
+    if ( $existing ) { update_option( 'fragments_notre_dame_lecture_installed', $existing->ID ); return; }
+    $category = fragments_news_category_id();
+    if ( ! $category ) { return; }
+    ob_start(); include get_theme_file_path( '/patterns/lecture-notre-dame.php' ); $content = ob_get_clean();
+    $id = wp_insert_post( array( 'post_type' => 'post', 'post_status' => 'publish',
+        'post_name' => 'frederic-dubois-notre-dame-lecture-2026',
+        'post_title' => 'Frédéric Dubois on the restoration of Notre-Dame Cathedral',
+        'post_excerpt' => 'Join Dr Frédéric Dubois on Wednesday, 2 December 2026, at 10:00 in the Great Council Hall, University of Zagreb | Faculty of Civil Engineering.',
+        'post_content' => wp_slash( $content ), 'post_category' => array( $category ),
+        'comment_status' => 'closed', 'ping_status' => 'closed' ), true );
+    if ( ! is_wp_error( $id ) && $id ) { update_option( 'fragments_notre_dame_lecture_installed', $id ); }
+}
+add_action( 'admin_init', 'fragments_install_notre_dame_lecture', 40 );
+
+/** Replace only the approved programme and timing blocks in the existing workshop. */
+function fragments_revise_workshop_blocks( $blocks, $programme, $facts, $note ) {
+    foreach ( $blocks as &$block ) {
+        $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+        if ( ( $block['attrs']['anchor'] ?? '' ) === 'programme' ) { $block = $programme; continue; }
+        if ( in_array( 'workshop-facts', $classes, true ) ) { $block = $facts; continue; }
+        if ( ! empty( $block['innerBlocks'] ) ) {
+            $block['innerBlocks'] = fragments_revise_workshop_blocks( $block['innerBlocks'], $programme, $facts, $note );
+        }
+        if ( in_array( 'workshop-poster', $classes, true ) && strpos( serialize_block( $block ), 'workshop-schedule-update' ) === false ) {
+            $block['innerBlocks'][] = $note;
+            array_splice( $block['innerContent'], max( 0, count( $block['innerContent'] ) - 1 ), 0, array( null ) );
+        }
+    }
+    unset( $block );
+    return $blocks;
+}
+function fragments_update_workshop_schedule() {
+    if ( get_option( 'fragments_workshop_schedule_nov23' ) ) { return; }
+    $post = get_page_by_path( 'lmgc90-workshop-zagreb-2026', OBJECT, 'post' );
+    if ( ! $post || ! current_user_can( 'edit_post', $post->ID ) ) { return; }
+    $content = $post->post_content;
+    // Only migrate the expected native block structure; preserve custom replacements.
+    if ( strpos( $content, '"anchor":"programme"' ) === false || strpos( $content, 'workshop-facts' ) === false ) { return; }
+    ob_start(); include get_theme_file_path( '/patterns/workshop-programme-updated.php' ); $programme = parse_blocks( trim( ob_get_clean() ) );
+    ob_start(); include get_theme_file_path( '/patterns/workshop-facts-updated.php' ); $facts = parse_blocks( trim( ob_get_clean() ) );
+    $note = parse_blocks( '<!-- wp:paragraph {"className":"workshop-schedule-update"} --><p class="workshop-schedule-update"><strong>Schedule update:</strong> the programme includes the Notre-Dame guest lecture on Wednesday at 10:00 and supersedes the programme on the original flyer. Friday ends at 17:00.</p><!-- /wp:paragraph -->' );
+    $updated = fragments_revise_workshop_blocks( parse_blocks( $content ), $programme[0], $facts[0], $note[0] );
+    $result = wp_update_post( array( 'ID' => $post->ID, 'post_content' => wp_slash( serialize_blocks( $updated ) ) ), true );
+    if ( ! is_wp_error( $result ) && $result ) { update_option( 'fragments_workshop_schedule_nov23', 1 ); }
+}
+add_action( 'admin_init', 'fragments_update_workshop_schedule', 41 );
+
+/** Portrait thumbnail for the lecture in News when no featured image is selected. */
+function fragments_lecture_news_portrait( $content, $block, $instance ) {
+    if ( ! is_page( 'news' ) || trim( $content ) !== '' ) { return $content; }
+    $post = get_post( $instance->context['postId'] ?? 0 );
+    if ( ! $post || 'frederic-dubois-notre-dame-lecture-2026' !== $post->post_name ) { return $content; }
+    $image = '<img src="' . esc_url( get_theme_file_uri( '/assets/images/portrait-frederic-dubois.jpg' ) ) . '" alt="Frédéric Dubois" loading="lazy">';
+    if ( ! empty( $block['attrs']['isLink'] ) ) { $image = '<a href="' . esc_url( get_permalink( $post ) ) . '">' . $image . '</a>'; }
+    return '<figure class="wp-block-post-featured-image news-lecture-portrait">' . $image . '</figure>';
+}
+add_filter( 'render_block_core/post-featured-image', 'fragments_lecture_news_portrait', 11, 3 );

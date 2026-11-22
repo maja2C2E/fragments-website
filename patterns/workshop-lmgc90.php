@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: FragMENTS - LMGC90 Workshop
+ * Title: FragMENTS - workshop-lmgc90
  * Slug: fragments/workshop-lmgc90
  * Categories: fragments
  * Inserter: yes
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">When</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>2–4 December 2026</strong><br/>09:00–17:00 daily</p>
+<p><strong>2–4 December 2026</strong><br/>09:00–17:00 daily<br/>Guest lecture: Wednesday at 10:00</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -92,6 +92,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:group -->
 <!-- wp:group {"className":"workshop-poster","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-poster">
+<!-- wp:paragraph {"className":"workshop-schedule-update"} -->
+<p class="workshop-schedule-update"><strong>Schedule update:</strong> the programme below includes the Notre-Dame guest lecture on Wednesday at 10:00 and supersedes the programme on the original flyer. Friday ends at 17:00.</p>
+<!-- /wp:paragraph -->
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/lmgc90-workshop-flyer.png' ) ); ?>" alt="LMGC90 Workshop flyer: Modelling masonry structures, Zagreb, 2–4 December 2026, with Frédéric Dubois."/><figcaption class="wp-element-caption">LMGC90 Workshop · Zagreb · 2–4 December 2026</figcaption></figure>
 <!-- /wp:image -->
@@ -143,12 +146,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph -->
-<p>The programme may be adjusted slightly by the lecturer. The teaching sequence combines theory, guided examples and practical support.</p>
+<p>Revised preliminary programme: Wednesday morning includes the Notre-Dame guest lecture. The workshop runs until 17:00 on Friday, with a final afternoon of guided masonry modelling. Minor adjustments may be made by the lecturer.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
+<!-- wp:paragraph {"className":"workshop-lecture-link"} -->
+<p class="workshop-lecture-link"><a href="<?php echo esc_url( fragments_notre_dame_lecture_url() ); ?>">Notre-Dame guest lecture: details and venue ↗</a></p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"workshop-breaks"} -->
-<p class="workshop-breaks"><strong>Daily breaks:</strong> 10:45–11:00 and 15:00–15:15. <strong>Lunch:</strong> 12:30–13:30.</p>
+<p class="workshop-breaks"><strong>Breaks:</strong> Thursday and Friday 10:45–11:00; daily 15:00–15:15. <strong>Lunch:</strong> daily 12:30–13:30. Wednesday morning is reserved for the guest lecture and the gathering that follows.</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"className":"workshop-day","tagName":"article","layout":{"type":"default"}} -->
 <article class="wp-block-group workshop-day">
@@ -163,7 +169,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">Wednesday, 2 December 2026</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">LMGC90 workflow & 2D rigid bodies</h3>
+<h3 class="wp-block-heading">Guest lecture, LMGC90 workflow & 2D models</h3>
 <!-- /wp:heading -->
 </div>
 <!-- /wp:group -->
@@ -174,15 +180,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">09:00–09:30</p>
+<p class="session-time">09:00–09:45</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Welcome and introduction</h4>
+<h4 class="wp-block-heading">Welcome and course preparation</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Participant interests, LMGC90 capabilities and selected masonry applications.</p>
+<p>Introductions, installation checks and an overview of LMGC90 and the course examples.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -191,32 +197,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">09:30–10:45</p>
+<p class="session-time">10:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">The calculation workflow</h4>
+<h4 class="wp-block-heading">Guest lecture: restoration of Notre-Dame Cathedral</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Preprocessing, computation and post-processing; the user environment, documentation and tutorials.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-session">
-<!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">11:00–12:30</p>
-<!-- /wp:paragraph -->
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Python preprocessing</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Bodies, materials, models, contactors, interaction laws, visibility tables and command scripts, using an existing example.</p>
+<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments. The remainder of the morning is reserved for this event.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -230,10 +219,10 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Guided 2D practical</h4>
+<h4 class="wp-block-heading">Calculation workflow and Python preprocessing</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Geometry, density, gravity, boundary conditions and contact definitions. Run a rigid-body example and inspect the output.</p>
+<p>Preprocessing, computation and post-processing; bodies, materials, contactors, interaction laws and command scripts in an existing example.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -242,32 +231,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">15:15–16:30</p>
+<p class="session-time">15:15–17:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Explore model parameters</h4>
+<h4 class="wp-block-heading">Guided 2D practical and parameter exploration</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Modify geometry, friction or loading and interpret the effect through post-processing and plots.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-session">
-<!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">16:30–17:00</p>
-<!-- /wp:paragraph -->
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Review and discussion</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Questions, practical difficulties and the physical interpretation of a selected result.</p>
+<p>Set up and run a rigid-body example; vary geometry, friction or loading, and visualise and interpret the results.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -309,7 +281,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Contact mechanics and NSCD</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Contact kinematics, reactions, separation, sticking, sliding and impacts; time integration and the coupled contact problem.</p>
+<p>Contact kinematics, separation, sticking, sliding and impacts; time integration and the coupled contact problem.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -343,7 +315,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Guided 3D practical</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Preprocess a rigid-body example, inspect contact definitions, apply boundary conditions and run the calculation.</p>
+<p>Preprocess and run a rigid-body example; examine contact definitions, boundary conditions and contact reactions.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -352,7 +324,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">15:15–16:30</p>
+<p class="session-time">15:15–16:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
@@ -360,7 +332,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Results and numerical settings</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Examine motion, reactions and solver information. Compare a numerical parameter with a baseline where practical.</p>
+<p>Inspect motion, reactions and solver convergence; distinguish physical instability from numerical difficulties.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -369,15 +341,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">16:30–17:00</p>
+<p class="session-time">16:00–17:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Convergence and practical support</h4>
+<h4 class="wp-block-heading">3D modelling exercises and validation checks</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Discuss computational efficiency and the distinction between physical instability and numerical difficulties.</p>
+<p>Extend the worked example, verify contact definitions and boundary conditions, and document the calculation settings.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -479,32 +451,15 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">15:15–16:30</p>
+<p class="session-time">15:15–17:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Practical support and discussion</h4>
+<h4 class="wp-block-heading">Guided masonry modelling practical</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Course examples, questions submitted in advance, contact definitions, scripts, numerical settings and interpretation.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-session">
-<!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">16:30–17:00</p>
-<!-- /wp:paragraph -->
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Conclusions and next steps</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Documentation, example resources and the next checks for participants’ own applications.</p>
+<p>Apply the course workflow to a selected masonry example, check interface parameters and numerical settings, and interpret and document the results.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

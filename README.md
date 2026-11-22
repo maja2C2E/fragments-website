@@ -48,3 +48,7 @@ Version 3.0.30 adds the 2–4 December 2026 workshop in Zagreb. After deployment
 Open Science includes Training & knowledge sharing, linking to the workshop announcement without duplicating its programme. Open the WordPress Dashboard once after deploying 3.0.31 to add the section to an existing Open Science page. No workshop materials are advertised as available.
 
 Version 3.0.32 adds section illustrations to Open Science. Existing saved pages receive the same visuals on rendering without replacing their content. Fragility curves are schematic; releases remain labelled as forthcoming.
+
+## Notre-Dame guest lecture and revised workshop programme
+
+Version 3.0.41 adds a News announcement for Frédéric Dubois's guest lecture on 2 December 2026 at 10:00 in the Great Council Hall. After deploying, open the WordPress Dashboard once with permission to publish posts and edit the workshop. The announcement is created once, and the existing workshop's programme and timing blocks are updated once. Wednesday morning is reserved for the lecture; Friday retains a 17:00 finish with guided masonry modelling. The programme remains preliminary. A note beside the original flyer directs readers to the revised web programme. Subsequent dashboard visits preserve editorial changes.
