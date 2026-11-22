@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">When</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
+<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00–12:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -93,7 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-poster","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-poster">
 <!-- wp:paragraph {"className":"workshop-schedule-update"} -->
-<p class="workshop-schedule-update"><strong>Schedule update:</strong> the programme below includes the Notre-Dame guest lecture on Wednesday at 10:00 and supersedes the programme on the original flyer. Friday ends at 17:00.</p>
+<p class="workshop-schedule-update"><strong>Schedule update:</strong> the programme below includes the Notre-Dame guest lecture on Wednesday at 10:00–12:00 and supersedes the programme on the original flyer. Friday ends at 17:00.</p>
 <!-- /wp:paragraph -->
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/lmgc90-workshop-flyer.png' ) ); ?>" alt="LMGC90 Workshop flyer: Modelling masonry structures, Zagreb, 2–4 December 2026, with Frédéric Dubois."/><figcaption class="wp-element-caption">LMGC90 Workshop · Zagreb · 2–4 December 2026</figcaption></figure>
@@ -180,7 +180,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">10:00</p>
+<p class="session-time">10:00–12:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
@@ -188,7 +188,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Guest lecture: restoration of Notre-Dame Cathedral</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments. The remainder of the morning is reserved for this event.</p>
+<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

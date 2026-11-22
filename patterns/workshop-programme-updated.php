@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">10:00</p>
+<p class="session-time">10:00–12:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Guest lecture: restoration of Notre-Dame Cathedral</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments. The remainder of the morning is reserved for this event.</p>
+<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

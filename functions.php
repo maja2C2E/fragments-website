@@ -350,7 +350,7 @@ function fragments_install_notre_dame_lecture() {
     $id = wp_insert_post( array( 'post_type' => 'post', 'post_status' => 'publish',
         'post_name' => 'frederic-dubois-notre-dame-lecture-2026',
         'post_title' => 'Frédéric Dubois on the restoration of Notre-Dame Cathedral',
-        'post_excerpt' => 'Join Dr Frédéric Dubois on Wednesday, 2 December 2026, at 10:00 in the Great Council Hall, University of Zagreb | Faculty of Civil Engineering.',
+        'post_excerpt' => 'Join Dr Frédéric Dubois on Wednesday, 2 December 2026, from 10:00 to 12:00 in the Great Council Hall, University of Zagreb | Faculty of Civil Engineering.',
         'post_content' => wp_slash( $content ), 'post_category' => array( $category ),
         'comment_status' => 'closed', 'ping_status' => 'closed' ), true );
     if ( ! is_wp_error( $id ) && $id ) { update_option( 'fragments_notre_dame_lecture_installed', $id ); }
@@ -421,3 +421,18 @@ function fragments_lecture_workshop_link( $content ) {
     return $content;
 }
 add_filter( 'render_block_core/paragraph', 'fragments_lecture_workshop_link' );
+
+/** Show the confirmed 10:00–12:00 event duration in saved content and news cards. */
+function fragments_lecture_event_hours( $content ) {
+    $content = str_replace( 'at 10:00 in the Great Council Hall', 'from 10:00 to 12:00 in the Great Council Hall', $content );
+    $content = preg_replace( '/(guest lecture (?:at |on Wednesday at )|Guest lecture: Wednesday at )10:00(?![–\d])/u', '${1}10:00–12:00', $content );
+    if ( is_singular( 'post' ) ) {
+        $slug = get_queried_object()->post_name;
+        if ( $slug === 'frederic-dubois-notre-dame-lecture-2026' || $slug === 'lmgc90-workshop-zagreb-2026' ) {
+            $content = str_replace( array( '<br/>10:00</p>', '<br>10:00</p>', '<p class="session-time">10:00</p>' ), array( '<br/>10:00–12:00</p>', '<br>10:00–12:00</p>', '<p class="session-time">10:00–12:00</p>' ), $content );
+            $content = str_replace( ' The remainder of the morning is reserved for this event.', '', $content );
+        }
+    }
+    return $content;
+}
+add_filter( 'render_block', 'fragments_lecture_event_hours', 21 );

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">When</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
+<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00–12:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
