@@ -400,3 +400,15 @@ function fragments_lecture_news_portrait( $content, $block, $instance ) {
     return '<figure class="wp-block-post-featured-image news-lecture-portrait">' . $image . '</figure>';
 }
 add_filter( 'render_block_core/post-featured-image', 'fragments_lecture_news_portrait', 11, 3 );
+
+/** Remove the cancelled Wednesday welcome session from saved workshop posts. */
+function fragments_workshop_no_welcome( $content, $block ) {
+    if ( ! is_singular( 'post' ) || get_queried_object()->post_name !== 'lmgc90-workshop-zagreb-2026' ) { return $content; }
+    $classes = preg_split( '/\s+/', $block['attrs']['className'] ?? '' );
+    if ( in_array( 'workshop-session', $classes, true ) && strpos( $content, 'Welcome and course preparation' ) !== false ) { return ''; }
+    if ( in_array( 'workshop-facts', $classes, true ) ) {
+        $content = preg_replace( '/09:00–17:00 daily(?:<br\s*\/?>Guest lecture: Wednesday at 10:00)?/u', 'Wednesday: guest lecture at 10:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday &amp; Friday: 09:00–17:00', $content );
+    }
+    return $content;
+}
+add_filter( 'render_block_core/group', 'fragments_workshop_no_welcome', 12, 2 );

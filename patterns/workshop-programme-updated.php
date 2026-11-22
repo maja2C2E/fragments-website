@@ -56,23 +56,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">09:00–09:45</p>
-<!-- /wp:paragraph -->
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Welcome and course preparation</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Introductions, installation checks and an overview of LMGC90 and the course examples.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-session">
-<!-- wp:paragraph {"className":"session-time"} -->
 <p class="session-time">10:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->

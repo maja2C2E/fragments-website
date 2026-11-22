@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">When</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>2–4 December 2026</strong><br/>09:00–17:00 daily<br/>Guest lecture: Wednesday at 10:00</p>
+<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -177,23 +177,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- /wp:group -->
 <!-- wp:group {"className":"workshop-sessions","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-sessions">
-<!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
-<div class="wp-block-group workshop-session">
-<!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">09:00–09:45</p>
-<!-- /wp:paragraph -->
-<!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group">
-<!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Welcome and course preparation</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Introductions, installation checks and an overview of LMGC90 and the course examples.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
