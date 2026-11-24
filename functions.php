@@ -475,3 +475,12 @@ function fragments_update_lecture_nov24() {
     }
 }
 add_action( 'admin_init', 'fragments_update_lecture_nov24', 50 );
+
+/** Remove the two introductory schedule explanations from saved lecture posts. */
+function fragments_lecture_remove_timing_paragraphs( $content ) {
+    if ( ! is_singular( 'post' ) || get_queried_object()->post_name !== 'frederic-dubois-notre-dame-lecture-2026' ) { return $content; }
+    $text = trim( wp_strip_all_tags( $content ) );
+    if ( in_array( $text, array( 'The 10:00–12:00 time slot covers the entire event, including the lecture, discussion and informal gathering.', 'The lecture and accompanying gathering will replace the morning programme of the first day of the LMGC90 workshop. Practical workshop sessions will begin at around 13:00.' ), true ) ) { return ''; }
+    return $content;
+}
+add_filter( 'render_block_core/paragraph', 'fragments_lecture_remove_timing_paragraphs', 12 );

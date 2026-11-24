@@ -78,13 +78,9 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="workshop-lead">The Faculty of Civil Engineering, University of Zagreb, and the Croatian Centre for Earthquake Engineering will host a guest lecture by Frédéric Dubois on the structural assessment of Notre-Dame Cathedral in Paris following the 2019 fire.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p><strong>The 10:00–12:00 time slot covers the entire event, including the lecture, discussion and informal gathering.</strong></p>
-<!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p><strong>The lecture and accompanying gathering will replace the morning programme of the first day of the LMGC90 workshop. Practical workshop sessions will begin at around 13:00.</strong></p>
-<!-- /wp:paragraph -->
+
+
 
 </div>
 <!-- /wp:group -->
