@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="eyebrow">When</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>2–4 December 2026</strong><br/>Wednesday: guest lecture at 10:00–12:00<br/>LMGC90 sessions 13:30–17:00<br/>Thursday & Friday: 09:00–17:00</p>
+<p><strong>2–4 December 2026</strong><br/>Wednesday: lecture, discussion & gathering 10:00–12:00<br/>Practical workshop sessions from around 13:00<br/>Thursday & Friday: 09:00–17:00</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -146,7 +146,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph -->
-<p>Revised preliminary programme: Wednesday morning includes the Notre-Dame guest lecture. The workshop runs until 17:00 on Friday, with a final afternoon of guided masonry modelling. Minor adjustments may be made by the lecturer.</p>
+<p>Revised preliminary programme: Wednesday’s 10:00–12:00 event includes the guest lecture, discussion and informal gathering, replacing the morning workshop activities. Practical workshop sessions begin at around 13:00. Friday runs until 17:00. Minor adjustments may be made by the lecturer.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -154,7 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <p class="workshop-lecture-link"><a href="<?php echo esc_url( fragments_notre_dame_lecture_url() ); ?>">Notre-Dame guest lecture: details and venue ↗</a></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"workshop-breaks"} -->
-<p class="workshop-breaks"><strong>Breaks:</strong> Thursday and Friday 10:45–11:00; daily 15:00–15:15. <strong>Lunch:</strong> daily 12:30–13:30. Wednesday morning is reserved for the guest lecture and the gathering that follows.</p>
+<p class="workshop-breaks"><strong>Breaks:</strong> Thursday and Friday 10:45–11:00; daily 15:00–15:15. <strong>Lunch:</strong> Wednesday 12:00–13:00; Thursday and Friday 12:30–13:30.</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"className":"workshop-day","tagName":"article","layout":{"type":"default"}} -->
 <article class="wp-block-group workshop-day">
@@ -185,10 +185,10 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":4} -->
-<h4 class="wp-block-heading">Guest lecture: restoration of Notre-Dame Cathedral</h4>
+<h4 class="wp-block-heading">Guest lecture and gathering: <a href="<?php echo esc_url( fragments_notre_dame_lecture_url() ); ?>">Post-Fire Structural Assessment of Notre-Dame de Paris ↗</a></h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Frédéric Dubois, Great Council Hall. Followed by a discussion and an informal gathering with refreshments.</p>
+<p>Dr Frédéric Dubois, Great Council Hall. The 10:00–12:00 slot covers the entire event: lecture, discussion and informal gathering. This event replaces the morning workshop activities.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -197,7 +197,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <!-- wp:group {"className":"workshop-session","layout":{"type":"default"}} -->
 <div class="wp-block-group workshop-session">
 <!-- wp:paragraph {"className":"session-time"} -->
-<p class="session-time">13:30–15:00</p>
+<p class="session-time">13:00–15:00</p>
 <!-- /wp:paragraph -->
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group">
@@ -205,7 +205,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h4 class="wp-block-heading">Calculation workflow and Python preprocessing</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Preprocessing, computation and post-processing; bodies, materials, contactors, interaction laws and command scripts in an existing example.</p>
+<p>Practical sessions begin at around 13:00. Preprocessing, computation and post-processing; bodies, materials, contactors, interaction laws and command scripts in an existing example.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

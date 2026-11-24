@@ -349,7 +349,7 @@ function fragments_install_notre_dame_lecture() {
     ob_start(); include get_theme_file_path( '/patterns/lecture-notre-dame.php' ); $content = ob_get_clean();
     $id = wp_insert_post( array( 'post_type' => 'post', 'post_status' => 'publish',
         'post_name' => 'frederic-dubois-notre-dame-lecture-2026',
-        'post_title' => 'Frédéric Dubois on the restoration of Notre-Dame Cathedral',
+        'post_title' => 'Post-Fire Structural Assessment of Notre-Dame de Paris',
         'post_excerpt' => 'Join Dr Frédéric Dubois on Wednesday, 2 December 2026, from 10:00 to 12:00 in the Great Council Hall, University of Zagreb | Faculty of Civil Engineering.',
         'post_content' => wp_slash( $content ), 'post_category' => array( $category ),
         'comment_status' => 'closed', 'ping_status' => 'closed' ), true );
@@ -443,3 +443,35 @@ function fragments_lecture_remove_intro_links( $content, $block ) {
     return $content;
 }
 add_filter( 'render_block_core/group', 'fragments_lecture_remove_intro_links', 12, 2 );
+
+/** Apply the approved November 24 text to the existing posts, retaining IDs and media. */
+function fragments_update_lecture_nov24() {
+    $lecture = get_page_by_path( 'frederic-dubois-notre-dame-lecture-2026', OBJECT, 'post' );
+    if ( $lecture && current_user_can( 'edit_post', $lecture->ID ) && ! get_option( 'fragments_lecture_text_nov24' ) ) {
+        ob_start(); include get_theme_file_path( '/patterns/lecture-notre-dame.php' ); $content = ob_get_clean();
+        // Keep all existing image URLs; the approved text update must not remove media.
+        preg_match_all( '/<img\b[^>]*\bsrc=["\x27]([^"\x27]+)["\x27]/i', $lecture->post_content, $images );
+        $preserved = true;
+        foreach ( $images[1] as $src ) { if ( strpos( $content, $src ) === false ) { $preserved = false; break; } }
+        if ( $preserved ) {
+            wp_save_post_revision( $lecture->ID );
+            $result = wp_update_post( array( 'ID' => $lecture->ID,
+                'post_title' => 'Post-Fire Structural Assessment of Notre-Dame de Paris',
+                'post_excerpt' => 'Guest lecture by Dr Frédéric Dubois on Wednesday, 2 December 2026, 10:00–12:00. The event includes the lecture, discussion and informal gathering. LMGC90 practical sessions begin at around 13:00.',
+                'post_content' => wp_slash( $content ) ), true );
+            if ( ! is_wp_error( $result ) && $result ) { update_option( 'fragments_lecture_text_nov24', 1 ); }
+        }
+    }
+    $workshop = get_page_by_path( 'lmgc90-workshop-zagreb-2026', OBJECT, 'post' );
+    if ( $workshop && current_user_can( 'edit_post', $workshop->ID ) && ! get_option( 'fragments_workshop_times_nov24' ) ) {
+        if ( strpos( $workshop->post_content, '"anchor":"programme"' ) === false ) { return; }
+        ob_start(); include get_theme_file_path( '/patterns/workshop-programme-updated.php' ); $programme = parse_blocks( trim( ob_get_clean() ) );
+        ob_start(); include get_theme_file_path( '/patterns/workshop-facts-updated.php' ); $facts = parse_blocks( trim( ob_get_clean() ) );
+        $note = parse_blocks( '<!-- wp:paragraph {"className":"workshop-schedule-update"} --><p class="workshop-schedule-update">The 10:00–12:00 event includes the guest lecture, discussion and informal gathering. Practical workshop sessions begin at around 13:00. The revised web programme supersedes the original flyer.</p><!-- /wp:paragraph -->' );
+        $updated = fragments_revise_workshop_blocks( parse_blocks( $workshop->post_content ), $programme[0], $facts[0], $note[0] );
+        wp_save_post_revision( $workshop->ID );
+        $result = wp_update_post( array( 'ID' => $workshop->ID, 'post_content' => wp_slash( serialize_blocks( $updated ) ) ), true );
+        if ( ! is_wp_error( $result ) && $result ) { update_option( 'fragments_workshop_times_nov24', 1 ); }
+    }
+}
+add_action( 'admin_init', 'fragments_update_lecture_nov24', 50 );
